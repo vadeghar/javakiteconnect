@@ -1,3 +1,4 @@
+package sample.src;
 import com.neovisionaries.ws.client.WebSocketException;
 import com.zerodhatech.kiteconnect.KiteConnect;
 import com.zerodhatech.kiteconnect.kitehttp.SessionExpiryHook;
@@ -19,7 +20,7 @@ public class Test {
         try {
             // First you should get request_token, public_token using kitconnect login and then use request_token, public_token, api_secret to make any kiteConnect api call.
             // Initialize KiteSdk with your apiKey.
-            KiteConnect kiteConnect = new KiteConnect("xxxxyyyyzzzz");
+            KiteConnect kiteConnect = new KiteConnect("9qkbbgca1t8dhsne");
 
             //If you wish to enable debug logs send true in the constructor, this will log request and response.
             //KiteConnect kiteConnect = new KiteConnect("xxxxyyyyzzzz", true);
@@ -28,7 +29,7 @@ public class Test {
             //KiteConnect kiteConnect = new KiteConnect("xxxxyyyyzzzz", userProxy, false);
 
             // Set userId
-            kiteConnect.setUserId("xxxxx");
+            kiteConnect.setUserId("DL0355");
 
             // Get login url
             String url = kiteConnect.getLoginURL();
@@ -45,109 +46,109 @@ public class Test {
                A request token is valid for only a couple of minutes and can be used only once. An access token is valid for one whole day. Don't call this method for every app run.
                Once an access token is received it should be stored in preferences or database for further usage.
             */
-            User user =  kiteConnect.generateSession("xxxxxtttyyy", "xxxxxxxyyyyy");
+            User user =  kiteConnect.generateSession("0PcBLBfO3KPbZzKa6dXWapZwLygZaG40", "a9ipm95kh0ascfuu0whio4flk9cqux88");
             kiteConnect.setAccessToken(user.accessToken);
             kiteConnect.setPublicToken(user.publicToken);
 
             Examples examples = new Examples();
 
-            examples.getProfile(kiteConnect);
+//            examples.getProfile(kiteConnect);
 
-            examples.getMargins(kiteConnect);
-
-            examples.getMarginCalculation(kiteConnect);
-
-            examples.placeOrder(kiteConnect);
-
-            examples.modifyOrder(kiteConnect);
-
-            examples.cancelOrder(kiteConnect);
-
-            examples.placeBracketOrder(kiteConnect);
-
-            examples.modifyFirstLegBo(kiteConnect);
-
-            examples.modifySecondLegBoSLM(kiteConnect);
-
-            examples.modifySecondLegBoLIMIT(kiteConnect);
-
-            examples.exitBracketOrder(kiteConnect);
-
-            examples.getTriggerRange(kiteConnect);
-
-            examples.placeCoverOrder(kiteConnect);
-
-            examples.converPosition(kiteConnect);
-
-            examples.getHistoricalData(kiteConnect);
-
-            examples.getOrders(kiteConnect);
-
-            examples.getOrder(kiteConnect);
-
-            examples.getTrades(kiteConnect);
-
-            examples.getTradesWithOrderId(kiteConnect);
-
-            examples.getPositions(kiteConnect);
-
-            examples.getHoldings(kiteConnect);
-
+//            examples.getMargins(kiteConnect);
+//
+//            examples.getMarginCalculation(kiteConnect);
+//
+//            examples.placeOrder(kiteConnect);
+//
+//            examples.modifyOrder(kiteConnect);
+//
+//            examples.cancelOrder(kiteConnect);
+//
+//            examples.placeBracketOrder(kiteConnect);
+//
+//            examples.modifyFirstLegBo(kiteConnect);
+//
+//            examples.modifySecondLegBoSLM(kiteConnect);
+//
+//            examples.modifySecondLegBoLIMIT(kiteConnect);
+//
+//            examples.exitBracketOrder(kiteConnect);
+//
+//            examples.getTriggerRange(kiteConnect);
+//
+//            examples.placeCoverOrder(kiteConnect);
+//
+//            examples.converPosition(kiteConnect);
+//
+//            examples.getHistoricalData(kiteConnect);
+//
+//            examples.getOrders(kiteConnect);
+//
+//            examples.getOrder(kiteConnect);
+//
+//            examples.getTrades(kiteConnect);
+//
+//            examples.getTradesWithOrderId(kiteConnect);
+//
+//            examples.getPositions(kiteConnect);
+//
+//            examples.getHoldings(kiteConnect);
+//
             examples.getAllInstruments(kiteConnect);
-
-            examples.getInstrumentsForExchange(kiteConnect);
-
-            examples.getQuote(kiteConnect);
-
-            examples.getOHLC(kiteConnect);
-
-            examples.getLTP(kiteConnect);
-
-            examples.getGTTs(kiteConnect);
-
-            examples.getGTT(kiteConnect);
-
-            examples.placeGTT(kiteConnect);
-
-            examples.modifyGTT(kiteConnect);
-
-            examples.cancelGTT(kiteConnect);
-
-            examples.getMFInstruments(kiteConnect);
-
-            examples.placeMFOrder(kiteConnect);
-
-            examples.cancelMFOrder(kiteConnect);
-
-            examples.getMFOrders(kiteConnect);
-
-            examples.getMFOrder(kiteConnect);
-
-            examples.placeMFSIP(kiteConnect);
-
-            examples.modifyMFSIP(kiteConnect);
-
-            examples.cancelMFSIP(kiteConnect);
-
-            examples.getMFSIPS(kiteConnect);
-
-            examples.getMFSIP(kiteConnect);
-
-            examples.getMFHoldings(kiteConnect);
+//
+//            examples.getInstrumentsForExchange(kiteConnect);
+//
+//            examples.getQuote(kiteConnect);
+//
+//            examples.getOHLC(kiteConnect);
+//
+//            examples.getLTP(kiteConnect);
+//
+//            examples.getGTTs(kiteConnect);
+//
+//            examples.getGTT(kiteConnect);
+//
+//            examples.placeGTT(kiteConnect);
+//
+//            examples.modifyGTT(kiteConnect);
+//
+//            examples.cancelGTT(kiteConnect);
+//
+//            examples.getMFInstruments(kiteConnect);
+//
+//            examples.placeMFOrder(kiteConnect);
+//
+//            examples.cancelMFOrder(kiteConnect);
+//
+//            examples.getMFOrders(kiteConnect);
+//
+//            examples.getMFOrder(kiteConnect);
+//
+//            examples.placeMFSIP(kiteConnect);
+//
+//            examples.modifyMFSIP(kiteConnect);
+//
+//            examples.cancelMFSIP(kiteConnect);
+//
+//            examples.getMFSIPS(kiteConnect);
+//
+//            examples.getMFSIP(kiteConnect);
+//
+//            examples.getMFHoldings(kiteConnect);
 
             examples.logout(kiteConnect);
 
             ArrayList<Long> tokens = new ArrayList<>();
             tokens.add(Long.parseLong("256265"));
-            examples.tickerUsage(kiteConnect, tokens);
+//            examples.tickerUsage(kiteConnect, tokens);
         } catch (KiteException e) {
             System.out.println(e.message+" "+e.code+" "+e.getClass().getName());
         } catch (JSONException e) {
             e.printStackTrace();
         }catch (IOException e) {
             e.printStackTrace();
-        } catch (WebSocketException e) {
-            e.printStackTrace();
+//        } catch (WebSocketException e) {
+//            e.printStackTrace();
         }
     }
 }

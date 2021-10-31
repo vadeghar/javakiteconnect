@@ -1,3 +1,5 @@
+package sample.src;
+
 import com.neovisionaries.ws.client.WebSocketException;
 import com.zerodhatech.kiteconnect.KiteConnect;
 import com.zerodhatech.kiteconnect.kitehttp.exceptions.KiteException;
@@ -413,6 +415,9 @@ public class Examples {
         // Get all instruments list. This call is very expensive as it involves downloading of large data dump.
         // Hence, it is recommended that this call be made once and the results stored locally once every morning before market opening.
         List<Instrument> instruments = kiteConnect.getInstruments();
+        for(Instrument instr : instruments) {
+        	System.out.println(instr);
+        }
         System.out.println(instruments.size());
     }
 
@@ -542,7 +547,7 @@ public class Examples {
     }
 
     /** Demonstrates com.zerodhatech.ticker connection, subcribing for instruments, unsubscribing for instruments, set mode of tick data, com.zerodhatech.ticker disconnection*/
-    public void tickerUsage(KiteConnect kiteConnect, ArrayList<Long> tokens) throws IOException, WebSocketException, KiteException {
+    public void tickerUsage(KiteConnect kiteConnect, final ArrayList<Long> tokens) throws IOException, WebSocketException, KiteException {
         /** To get live price use websocket connection.
          * It is recommended to use only one websocket connection at any point of time and make sure you stop connection, once user goes out of app.
          * custom url points to new endpoint which can be used till complete Kite Connect 3 migration is done. */

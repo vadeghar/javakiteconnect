@@ -109,4 +109,14 @@ public class Instrument {
     public void setLot_size(int lot_size) {
         this.lot_size = lot_size;
     }
+
+	@Override
+	public String toString() {
+		return "Instrument [instrument_token=" + instrument_token + ", exchange_token=" + exchange_token
+				+ ", tradingsymbol=" + tradingsymbol + ", name=" + name + ", last_price=" + last_price + ", tick_size="
+				+ tick_size + ", instrument_type=" + instrument_type + ", segment=" + segment + ", exchange=" + exchange
+				+ ", strike=" + strike + ", lot_size=" + lot_size + ", expiry=" + expiry + "]";
+	}
+    
+    
 }
