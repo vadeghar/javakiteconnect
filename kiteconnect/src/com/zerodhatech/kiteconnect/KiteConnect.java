@@ -40,7 +40,8 @@ public class KiteConnect {
     private String userId;
     private Gson gson;
     private KiteRequestHandler kiteRequestHandler;
-
+    public KiteConnect(){
+    }
     /** Initializes KiteSDK with the api key provided for your app.
      * @param apiKey is the api key provided after creating new Kite Connect app on developers console.
      */

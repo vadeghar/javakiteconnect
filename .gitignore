@@ -10,3 +10,8 @@ out/*
 !sample/.idea/
 sample/.idea/*
 production/*
+/target/
+.settings/org.eclipse.m2e.core.prefs
+.settings/org.eclipse.jdt.core.prefs
+.project
+.classpath
